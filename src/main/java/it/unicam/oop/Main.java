@@ -7,7 +7,8 @@ package it.unicam.oop;
  */
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
-
+        SetupController setupController = new SetupController();
+        PartitaController partitaController = new PartitaController(setupController.inizializzaSetup());
+        partitaController.startGame();
     }
 }

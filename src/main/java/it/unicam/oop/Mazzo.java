@@ -1,6 +1,7 @@
 package it.unicam.oop;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Mazzo implements iMazzo{
@@ -9,8 +10,7 @@ public class Mazzo implements iMazzo{
 
     private List<Carta> listMazzo = new ArrayList<>();
 
-    public Mazzo(List<Carta> listMazzo) {
-        this.listMazzo = listMazzo;
+    public Mazzo() {
     }
 
     public List<Carta> getListMazzo() {
@@ -31,6 +31,11 @@ public class Mazzo implements iMazzo{
      */
     @Override
     public void mischiareMazzo() {
-
+        Collections.shuffle(this.listMazzo);
     }
+
+    public Carta getCartaAtIndex(int n){
+        return listMazzo.get(n);
+    }
+
 }

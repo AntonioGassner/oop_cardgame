@@ -14,7 +14,8 @@ public class MazzoTest {
         List<Carta> cartaList = new ArrayList<Carta>();
         Carta carta = new Carta("Coppe", 1);
         cartaList.add(carta);
-        Mazzo mazzo = new Mazzo(cartaList);
+        Mazzo mazzo = new Mazzo();
+        mazzo.setListMazzo(cartaList);
 
 
         assertEquals(1, cartaList.size(), "Optional message if the test fails");
