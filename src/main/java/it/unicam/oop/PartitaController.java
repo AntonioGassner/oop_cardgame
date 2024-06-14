@@ -29,6 +29,8 @@ public class PartitaController implements iPartitaController{
 
     @Override
     public void startGame() {
+
+
         // determina il giocatore attivo
         // controlliamo di continuo se un giocatore vince o perder
         // giochiamo finche la condizione sopra non e soddisfatta
@@ -52,6 +54,7 @@ public class PartitaController implements iPartitaController{
     public void giocaTurno(int i){
         Giocatore giocatoreAttivo = giocatoreList.get(i);
         Giocatore giocatorePassivo = giocatoreList.get((i+1)%giocatoreList.size());
+
         giocatoreAttivo.pescareCarta(giocatorePassivo);
         giocatoreAttivo.scartareCoppia();
 

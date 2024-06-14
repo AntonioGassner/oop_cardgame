@@ -15,6 +15,7 @@ public class SetupController {
         // todo ottenere il numero giocatori dal player
         //  sarebbe appropriato avere questo metodo dentro
         //  a una classe utils o Input/Output che interagisce con il Player
+        // int mazzoScelto = consoleIO.selezionaMazzo();
         inizializzaMazzo();
         return inizializzaGiocatori(numeroGiocatori);
     }
